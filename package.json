@@ -1,0 +1,25 @@
+{
+  "name": "video-captioner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered video captioning tool that generates captions in four distinct styles: formal, sarcastic, humorous tech, and humorous non-tech.",
+  "scripts": {
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && python -m app.main",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menukahansda/video-captioner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/menukahansda/video-captioner/issues"
+  },
+  "homepage": "https://github.com/menukahansda/video-captioner#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}

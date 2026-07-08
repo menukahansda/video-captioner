@@ -1,0 +1,31 @@
+# Environment variables / secrets
+backend/.env
+
+# Python
+backend/__pycache__/
+backend/*.py[cod]
+backend/.venv/
+backend/venv/
+backend/*.egg-info/
+
+# Project runtime data
+backend/data/uploads/*
+backend/data/frames/*
+backend/data/audio/*
+backend/data/outputs/*
+!backend/data/uploads/.gitkeep
+!backend/data/frames/.gitkeep
+!backend/data/audio/.gitkeep
+!backend/data/outputs/.gitkeep
+
+# OS/editor junk
+backend/.DS_Store
+backend/.vscode/
+backend/.idea/
+
+## node modules
+node_modules/
+frontend/node_modules/
+
+# Notes
+notes.md

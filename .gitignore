@@ -2,11 +2,11 @@
 backend/.env
 
 # Python
-backend/__pycache__/
-backend/*.py[cod]
+**/__pycache__/
+*.py[cod]
 backend/.venv/
 backend/venv/
-backend/*.egg-info/
+*.egg-info/
 
 # Project runtime data
 backend/data/uploads/*
@@ -19,9 +19,9 @@ backend/data/outputs/*
 !backend/data/outputs/.gitkeep
 
 # OS/editor junk
-backend/.DS_Store
-backend/.vscode/
-backend/.idea/
+.DS_Store
+.vscode/
+.idea/
 
 ## node modules
 node_modules/

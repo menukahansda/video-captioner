@@ -1,6 +1,8 @@
 import subprocess
 from pathlib import Path
+
 from config.settings import AUDIO_DIR, VIDEO_DIR
+from src.utils.logger import logger
 
 def has_audio(video_path: str | Path) -> bool:
     """Check if a video file has an audio stream."""
@@ -24,22 +26,31 @@ def extract_audio(video_path: str | Path) -> Path | None:
     audio_path = AUDIO_DIR / f"audio_{task_id}.wav"
     
     if audio_path.exists():
-        print("Audio already extracted.")
+        logger.info("Audio already extracted: %s", audio_path.name)
         return audio_path
     
     if not has_audio(video_path):
-        print(f"No audio stream found in {video_path}. Skipping extraction.")
+        logger.warning(
+            "No audio stream found in %s. Skipping extraction.",
+            Path(video_path).name
+        )
         return None
     
-    subprocess.run([
-        "ffmpeg", 
-        "-i", str(video_path),           
-        "-vn",                      
-        "-acodec", "pcm_s16le",     
-        "-ar", "16000",             
-        "-ac", "1",                 
-        str(audio_path)            
-    ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    logger.info("Extracting audio from %s...", Path(video_path).name)
+    try:
+        subprocess.run([
+            "ffmpeg", 
+            "-i", str(video_path),           
+            "-vn",                      
+            "-acodec", "pcm_s16le",     
+            "-ar", "16000",             
+            "-ac", "1",                 
+            str(audio_path)            
+        ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        logger.info("Audio extraction completed: %s", audio_path.name)
+    except subprocess.CalledProcessError:
+        logger.exception("Audio extraction failed for %s", Path(video_path).name)
+        raise
     return audio_path
 
 if __name__ == "__main__":

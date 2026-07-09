@@ -6,6 +6,7 @@ from scenedetect import open_video,SceneManager
 from scenedetect.detectors import ContentDetector
 
 from config.settings import FRAMES_DIR, MAX_KEYFRAMES
+from src.utils.logger import logger
 
 def extract_keyframes(video_path:Path,task_id:str):
     output_dir=FRAMES_DIR/task_id
@@ -17,6 +18,8 @@ def extract_keyframes(video_path:Path,task_id:str):
     video=open_video(str(video_path))
     scene_manager=SceneManager()
     scene_manager.add_detector(ContentDetector(threshold=8))
+    
+    logger.info("Detecting scenes for %s...", video_path.name)
     scene_manager.detect_scenes(video)
     scene_list=scene_manager.get_scene_list()
     # print(f"Number of scenes detected: {len(scene_list)}")
@@ -33,7 +36,7 @@ def extract_keyframes(video_path:Path,task_id:str):
     
     saved_frames=[]
     if len(scene_list) > 0:
-        print(f"{len(scene_list)} scenes detected.")
+        logger.info("%d scenes detected.", len(scene_list))
         for index,scene in enumerate(scene_list):
             start_time,end_time=scene
             start_frame=start_time.frame_num
@@ -50,7 +53,7 @@ def extract_keyframes(video_path:Path,task_id:str):
             if len(saved_frames)>=MAX_KEYFRAMES:
                 break
     else:
-        print("No scenes detected. Using interval sampling...")
+        logger.warning("No scenes detected. Using interval sampling...")
         desired_frames = min(MAX_KEYFRAMES, 8)
         interval_frames = max(1, total_frames // desired_frames)
 
@@ -65,6 +68,7 @@ def extract_keyframes(video_path:Path,task_id:str):
             if len(saved_frames) >= MAX_KEYFRAMES:
                 break
     cap.release()
+    logger.info("Extracted %d keyframes from %s.", len(saved_frames), video_path.name)
     return saved_frames
     
     

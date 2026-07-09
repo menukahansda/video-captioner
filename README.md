@@ -3,6 +3,7 @@ AI-powered video captioning tool that generates captions in four distinct styles
 
 ## Table of Contents
 - [Project Structure](#project-structure)
+- [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Authors](#authors)
@@ -73,9 +74,18 @@ video-captioner/
 └── frontend
 
 ```
+
+## Requirements
+
+- Python 3.13 (tested with Python 3.13.14)
+- Node.js and npm
+- pip
+
+
 ## Installation
 ### Root
 Install the root development dependencies.
+
 ```bash
 npm install
 ```
@@ -86,13 +96,16 @@ npm install
 # from root
 cd backend
 
-python -m venv .venv
+python -m venv venv
 
 # Windows
-.venv\Scripts\activate
+venv\Scripts\activate
 
 # Linux/macOS
-source .venv/bin/activate
+source venv/bin/activate
+
+# Git Bash
+source venv/Scripts/activate
 
 pip install -r requirements.txt
 ```
@@ -107,7 +120,7 @@ npm install
 
 
 ## Usage
-### Run the complete application
+### Run the full application
 
 ```bash
 npm run dev
@@ -118,7 +131,12 @@ npm run dev
 ```bash
 # from root
 cd backend
-# Activate virtual environment first
+
+# Activate the virtual environment first
+source venv/Scripts/activate   # Git Bash
+```
+
+```bash
 python scripts/run_batch.py data/uploads/       #multiple videos
 python scripts/run_single.py                    #single video
 ```

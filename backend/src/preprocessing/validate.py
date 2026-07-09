@@ -27,8 +27,8 @@ def validate_video(video_path:Path):
         "height":height
     }
 
-if __name__=="__main__":
-    from config.settings import VIDEO_DIR
-    video_path=VIDEO_DIR/"v1.mp4"
-    metadata=validate_video(video_path)
-    print(metadata)
+# if __name__=="__main__":
+#     from config.settings import VIDEO_DIR
+#     video_path=VIDEO_DIR/"v1.mp4"
+#     metadata=validate_video(video_path)
+#     print(metadata)

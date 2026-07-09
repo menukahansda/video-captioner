@@ -2,6 +2,7 @@ from pathlib import Path
 BASE_DIR=Path(__file__).resolve().parent.parent
 DATA_DIR=BASE_DIR/"data"
 VIDEO_DIR=DATA_DIR/"videos"
+MAX_KEYFRAMES=12
 
 # Temporary/intermediate processing folders (gitignored)
 AUDIO_DIR = DATA_DIR / "audio"

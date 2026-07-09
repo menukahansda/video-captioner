@@ -13,7 +13,7 @@ def download_video(video_url:str,task_id:str)->Path:
                 file.write(chunk)  
     return video_path
 
-if __name__ == "__main__":
-    url="https://storage.googleapis.com/amd-hackathon-clips/1860079-uhd_2560_1440_25fps.mp4"
-    saved_path=download_video(url,"v1")
-    print(f"Downloaded to:{saved_path}")
+# if __name__ == "__main__":
+#     url="https://storage.googleapis.com/amd-hackathon-clips/1860079-uhd_2560_1440_25fps.mp4"
+#     saved_path=download_video(url,"v1")
+#     print(f"Downloaded to:{saved_path}")

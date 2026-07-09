@@ -35,7 +35,14 @@ Rules:
 - Do not invent events.
 - Stay faithful to the video.
 - Match the requested tone.
-- Return ONLY valid JSON.
+- Return ONLY valid JSON, no markdown fences, no extra text.
+- Use exactly this schema:
+{{
+  "formal": "...",
+  "sarcastic": "...",
+  "humorous_tech": "...",
+  "humorous_non_tech": "..."
+}}
 
 Video Summary:
 {summary}

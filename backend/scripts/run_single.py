@@ -2,6 +2,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
+import uuid
 
 from config.settings import OUTPUTS_DIR
 from src.pipeline import run_pipeline
@@ -26,10 +27,10 @@ def main():
         logger.error(f"Video not found: {video_path}")
         sys.exit(1)
         
-    task_id = video_path.stem
+    task_id = f"{video_path.stem}_{uuid.uuid4().hex[:8]}"
     
     try:
-        result = run_pipeline(video_path, args.backend)
+        result = run_pipeline(video_path, task_id, args.backend)
     
         if result is None:
             logger.error("Pipeline failed.")

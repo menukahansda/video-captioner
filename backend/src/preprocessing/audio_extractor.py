@@ -20,9 +20,8 @@ def has_audio(video_path: str | Path) -> bool:
     return bool(result.stdout)
 
 
-def extract_audio(video_path: str | Path) -> Path | None:
+def extract_audio(video_path: str | Path, task_id : str) -> Path | None:
     AUDIO_DIR.mkdir(parents=True, exist_ok=True)
-    task_id = Path(video_path).stem
     audio_path = AUDIO_DIR / f"audio_{task_id}.wav"
     
     if audio_path.exists():

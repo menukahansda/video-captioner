@@ -14,7 +14,7 @@ client=genai.Client(api_key=api_key)
 
 def generate_text(prompt: str):
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-3.1-pro",
         contents=prompt,
     )
     return response.text

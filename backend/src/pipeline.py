@@ -7,7 +7,7 @@ from src.preprocessing.keyframe_extractor import extract_keyframes
 from src.preprocessing.audio_extractor import extract_audio
 from src.preprocessing.audio_transcribe import transcribe_audio
 
-def run_pipeline(video_path, backend_name="gemini", config=None):
+def run_pipeline(video_path : str | Path, backend_name="gemini", config=None):
     # 1. Validate input
     validate_video(video_path) 
     
@@ -23,7 +23,7 @@ def run_pipeline(video_path, backend_name="gemini", config=None):
     # TODO: Generate captions using the selected backend.
 
     preprocessed = {
-        "frames": frames,
+        "frames": [str(frame) for frame in frames],
         "transcript": transcript,
     }
     

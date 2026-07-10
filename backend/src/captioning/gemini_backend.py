@@ -14,14 +14,14 @@ client=genai.Client(api_key=api_key)
 
 def generate_text(prompt: str):
     response = client.models.generate_content(
-        model="gemini-3.1-pro",
+        model="gemini-3.5-flash",
         contents=prompt,
     )
     return response.text
 
 def generate_video_summary(contents):
     response=client.models.generate_content(
-        model="gemini-3.1-pro",
+        model="gemini-3.5-flash",
         contents=contents,
     )
     return response.text

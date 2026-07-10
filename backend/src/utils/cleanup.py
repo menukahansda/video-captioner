@@ -28,11 +28,11 @@ def _clean_dir_contents(directory) -> None:
             shutil.rmtree(item)
         elif item.is_file():
             item.unlink()
-    logger.info(f"Cleaned directory contents: {directory.name}")
          
             
-def cleanup_storage() -> None:
+def cleanup_storage(dir) -> None:
     """Remove all uploaded and generated data."""
-    _clean_dir_contents(OUTPUTS_DIR)
-    _clean_dir_contents(UPLOADS_DIR)
-    
+    _clean_dir_contents(OUTPUTS_DIR / dir)
+    _clean_dir_contents(UPLOADS_DIR / dir)
+    logger.info(f"Cleaned directory contents: {dir.name}")
+     

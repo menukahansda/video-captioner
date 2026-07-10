@@ -1,7 +1,7 @@
 import shutil
 
 from config.settings import AUDIO_DIR, FRAMES_DIR
-from utils.logger import logger
+from src.utils.logger import logger
 
 def cleanup(task_id: str) -> None:
     # Delete audio file

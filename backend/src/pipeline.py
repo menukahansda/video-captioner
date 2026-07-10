@@ -9,14 +9,13 @@ from src.preprocessing.audio_transcribe import transcribe_audio
 from src.merge import summarize_video
 from src.captioning.caption_generator import generate_captions
 
-def run_pipeline(video_path : str | Path, backend_name="gemini", config=None):
+def run_pipeline(video_path : str | Path, task_id : str, backend_name="gemini"):
     # 1. Validate input
     validate_video(video_path) 
     
     # 2. Extract
-    task_id = Path(video_path).stem
     frames = extract_keyframes(video_path, task_id)  
-    audio = extract_audio(video_path)
+    audio = extract_audio(video_path, task_id)
 
     # 3. Transcribe 
     transcript = transcribe_audio(audio)

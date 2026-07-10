@@ -40,7 +40,7 @@ def extract_keyframes(video_path:Path,task_id:str):
         for index,scene in enumerate(scene_list):
             start_time,end_time=scene
             start_frame=start_time.frame_num
-            end_frame=end_time.frame_nums
+            end_frame=end_time.frame_num
             middle_frame=(start_frame+end_frame)//2
             cap.set(cv2.CAP_PROP_POS_FRAMES, middle_frame)
             

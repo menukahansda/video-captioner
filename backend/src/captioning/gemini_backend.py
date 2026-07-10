@@ -21,7 +21,7 @@ def generate_text(prompt: str):
 
 def generate_video_summary(contents):
     response=client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-3.1-pro",
         contents=contents,
     )
     return response.text

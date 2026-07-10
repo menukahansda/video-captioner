@@ -33,19 +33,19 @@ def generate_video_summary(contents):
         f"Unsupported backend: {DEFAULT_BACKEND}"
     )
 
-if __name__ == "__main__":
-    from pathlib import Path
-    from PIL import Image
+# if __name__ == "__main__":
+#     from pathlib import Path
+#     from PIL import Image
 
-    frame_dir = Path("data/frames/v1")
+#     frame_dir = Path("data/frames/v1")
 
-    contents = [
-        "Describe these video frames in a concise factual summary."
-    ]
+#     contents = [
+#         "Describe these video frames in a concise factual summary."
+#     ]
 
-    for image_path in sorted(frame_dir.glob("*.jpg")):
-        contents.append(Image.open(image_path))
+#     for image_path in sorted(frame_dir.glob("*.jpg")):
+#         contents.append(Image.open(image_path))
 
-    summary = generate_video_summary(contents)
+#     summary = generate_video_summary(contents)
 
-    print(summary)
+#     print(summary)

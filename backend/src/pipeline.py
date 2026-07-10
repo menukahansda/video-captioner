@@ -33,18 +33,18 @@ def run_pipeline(video_path : str | Path, task_id : str, backend_name="gemini"):
 
     return result
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    video_path = VIDEO_DIR / "examples" / "e1.mp4"
+#     video_path = VIDEO_DIR / "examples" / "e1.mp4"
 
-    result = run_pipeline(video_path)
+#     result = run_pipeline(video_path)
 
-    print("\n===== VIDEO SUMMARY =====\n")
-    print(result["summary"])
+#     print("\n===== VIDEO SUMMARY =====\n")
+#     print(result["summary"])
 
-    print("\n===== CAPTIONS =====\n")
+#     print("\n===== CAPTIONS =====\n")
 
-    for style, caption in result["captions"].items():
-        print(f"{style}:")
-        print(caption)
-        print()
+#     for style, caption in result["captions"].items():
+#         print(f"{style}:")
+#         print(caption)
+#         print()

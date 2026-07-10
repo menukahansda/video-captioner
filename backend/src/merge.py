@@ -34,15 +34,15 @@ def summarize_video(frame_paths, transcript):
     return summary
 
 
-if __name__ == "__main__":
-    from pathlib import Path
+# if __name__ == "__main__":
+#     from pathlib import Path
 
-    frame_dir = Path("data/frames/v1")
+#     frame_dir = Path("data/frames/v1")
 
-    frame_paths = sorted(frame_dir.glob("*.jpg"))
+#     frame_paths = sorted(frame_dir.glob("*.jpg"))
 
-    transcript = "No speech available."
+#     transcript = "No speech available."
 
-    summary = summarize_video(frame_paths, transcript)
+#     summary = summarize_video(frame_paths, transcript)
 
-    print(summary)
+#     print(summary)

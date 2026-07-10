@@ -12,10 +12,10 @@ def generate_captions(summary: str):
         raise ValueError("Gemini returned an invalid JSON response.")
     
 
-if __name__ == "__main__":
-    sample_summary = """
-    A person walks through a tree-lined street while vehicles pass by.
-    The weather is pleasant and the surroundings are calm.
-    """
-    captions = generate_captions(sample_summary)
-    print(json.dumps(captions, indent=4))
+# if __name__ == "__main__":
+#     sample_summary = """
+#     A person walks through a tree-lined street while vehicles pass by.
+#     The weather is pleasant and the surroundings are calm.
+#     """
+#     captions = generate_captions(sample_summary)
+#     print(json.dumps(captions, indent=4))

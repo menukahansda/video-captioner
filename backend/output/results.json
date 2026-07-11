@@ -1,0 +1,24 @@
+[
+  {
+    "task_id": "v1",
+    "captions": {
+      "formal": "Experience the dynamic flow of autumn in South Korea as urban traffic blends seamlessly with the vibrant yellow ginkgo trees lining this busy city avenue.",
+      "sarcastic": "Because nothing screams 'enjoying the peaceful autumn colors' like rushing through a multi-lane intersection at supersonic speed. At least the ginkgo trees had the decency to stand still.",
+      "humorous_tech": "South Korea's autumn update is looking great, but the frame rate on these cars is causing some serious motion blur. Clearly, the rendering budget went entirely into those high-definition yellow ginkgo trees.",
+      "humorous_non_tech": "It looks like everyone in South Korea is racing to get a look at those gorgeous yellow ginkgo trees. Either that, or they are all late for an important meeting at Korea Illies Engineering."
+    }
+  },
+  {
+    "task_id": "v2",
+    "captions": {}
+  },
+  {
+    "task_id": "v3",
+    "captions": {
+      "formal": "A dedicated professional demonstrates deep focus and productivity while working at her desk in a modern open-plan office.",
+      "sarcastic": "Nothing screams 'uninterrupted concentration' quite like typing away in an open-plan office with just a black partition screen for privacy.",
+      "humorous_tech": "When you stare at a large computer screen with enough focus, you hope the white keyboard knows exactly what you're trying to input.",
+      "humorous_non_tech": "Hoping that if I look busy enough typing at my desk, the office plants will take care of the rest of my tasks."
+    }
+  }
+]

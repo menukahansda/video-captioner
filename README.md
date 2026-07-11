@@ -11,8 +11,7 @@ AI-powered video captioning tool that generates captions in four distinct styles
 ## Project Structure
 ```text
 video-captioner/
-│
-├── docker-compose.yml                          
+│                        
 ├── .gitignore
 ├── README.md
 ├── backend/
@@ -46,7 +45,7 @@ video-captioner/
 │   │   ├── captioning/
 │   │   │   ├── __init__.py
 │   │   │   ├── llm_client.py
-│   │   │   ├── fireworks_backend.py
+│   │   │   ├── gemini_backend.py
 │   │   │   ├── local_backend.py
 │   │   │   └── prompts.py
 │   │   │
@@ -54,6 +53,7 @@ video-captioner/
 │   │   ├── pipeline.py
 │   │   └── utils/
 │   │       ├── __init__.py
+│   │       ├── cleanup.py
 │   │       └── logging.py
 │   │
 │   ├── data/
@@ -71,15 +71,31 @@ video-captioner/
 │       ├── test_audio_transcribe.py
 │       └── test_pipeline.py
 │
-└── frontend
+└── frontend/
+    ├── public/
+    │   └── favicon.svg
+    ├── src/
+    │   ├── components/
+    │   │   └── FileUploader.jsx
+    │   ├── utils/
+    │   │   └── userId.js
+    │   ├── App.jsx
+    │   ├── index.css
+    │   ├── App.css
+    │   └── main.jsx
+    ├── .env.example
+    ├── package.json
+    ├── vite.config.js
+    ├── eslint.config.js
+    └── index.html
 
 ```
 
 ## Requirements
 
 - Python 3.13 (tested with Python 3.13.14)
-- Node.js and npm
-- pip
+- Node.js (includes npm)
+- FFmpeg (must be installed and available in your system PATH)
 
 
 ## Installation
@@ -126,19 +142,17 @@ npm install
 npm run dev
 ```
 
-### Run backend only
+### Run backend as CLI
 
 ```bash
 # from root
 cd backend
 
-# Activate the virtual environment first
-source venv/Scripts/activate   # Git Bash
 ```
 
 ```bash
-python scripts/run_batch.py data/uploads/       #multiple videos
-python scripts/run_single.py                    #single video
+python scripts/run_single.py path/to/video.mp4  #single video
+python scripts/run_batch.py path/to/video1.mp4 path/to/video2.mp4  #multiple videos
 ```
 
 

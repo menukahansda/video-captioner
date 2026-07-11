@@ -5,7 +5,7 @@
   "description": "AI-powered video captioning tool that generates captions in four distinct styles: formal, sarcastic, humorous tech, and humorous non-tech.",
   "scripts": {
     "frontend": "cd frontend && npm run dev",
-    "backend": "cd backend && python -m app.main",
+    "backend": "cd backend && venv\\Scripts\\python -m app.main",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "repository": {

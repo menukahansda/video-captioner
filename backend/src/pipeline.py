@@ -18,7 +18,7 @@ def run_pipeline(video_path : str | Path, task_id : str, backend_name="gemini"):
     audio = extract_audio(video_path, task_id)
 
     # 3. Transcribe 
-    transcript = transcribe_audio(audio)
+    transcript = transcribe_audio(audio) if audio else ""
 
     # 4. Summary
     summary = summarize_video(frames, transcript)

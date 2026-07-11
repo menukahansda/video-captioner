@@ -4,7 +4,7 @@ from config.settings import AUDIO_DIR
 from src.utils.logger import logger
 
 logger.info("Loading Faster-Whisper model...")
-model = WhisperModel("small", device="cpu", compute_type="int8")
+model = WhisperModel("tiny", device="cpu", compute_type="int8")
 logger.info("Faster-Whisper model loaded.")
 
 def transcribe_audio(audio_path: str | Path) -> str:

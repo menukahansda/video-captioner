@@ -1,0 +1,30 @@
+# Local data — don't ship test artifacts into the image
+data/uploads/*
+data/frames/*
+data/audio/*
+data/outputs/*
+
+# Python cruft
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Git
+.git
+.gitignore
+
+# Tests — not needed at runtime
+tests/
+
+# Docs — not needed at runtime
+README.md
+
+# Editor/OS junk
+.vscode/
+.idea/
+.DS_Store
+
+# venv if you have one locally
+venv311/
+venv/

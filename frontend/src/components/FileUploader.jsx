@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { getUserId } from "../utils/userId";
 import { LoaderCircle } from "lucide-react";
 
@@ -7,8 +7,12 @@ export default function FileUploader() {
   const [fileSelected, setFileSelected] = useState(false);
   const [isResult, setIsResult] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [result, setResult] = useState(null); 
+  const [result, setResult] = useState(null);
+  const [previewFiles, setPreviewFiles] = useState([]);
 
+  function formatStyleLabel(key) {
+    return key.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+  }
   const handleSelectClick = () => {
     fileInputRef.current.click();
   };
@@ -17,6 +21,12 @@ export default function FileUploader() {
     const files = event.target.files;
     if (files.length > 0) {
       setFileSelected(true);
+      setPreviewFiles(
+        Array.from(files).map((f) => ({
+          stem: f.name.replace(/\.[^/.]+$/, ""),
+          url: URL.createObjectURL(f),
+        })),
+      );
       console.log(
         "Selected files:",
         Array.from(files).map((f) => f.name),
@@ -50,7 +60,17 @@ export default function FileUploader() {
       }
 
       const data = await response.json();
-      setResult(data);
+      const normalized = Object.entries(data.results ?? {}).map(
+        ([taskId, value]) => ({
+          taskId,
+          summary: value.summary,
+          captions: value.captions,
+          previewUrl: previewFiles.find((p) =>
+            taskId.startsWith(`${p.stem}_`),
+          )?.url,
+        }),
+      );
+      setResult(normalized);
       setIsResult(true);
     } catch (error) {
       console.error("Processing failed:", error);
@@ -59,9 +79,19 @@ export default function FileUploader() {
     }
   };
 
+  useEffect(() => {
+    return () => {
+      previewFiles.forEach(({ url }) => URL.revokeObjectURL(url));
+    };
+  }, [previewFiles]);
+
   return (
     <div className="flex flex-col items-center gap-4">
-      <button onClick={handleSelectClick} className="file-selector-btn" disabled={isLoading}>
+      <button
+        onClick={handleSelectClick}
+        className="file-selector-btn"
+        disabled={isLoading}
+      >
         Select Videos
       </button>
 
@@ -91,10 +121,32 @@ export default function FileUploader() {
         </button>
       )}
 
-      {isResult && (
-        <pre>
-          {JSON.stringify(result, null, 2)}
-        </pre> /* placeholder until UI is built */
+      {isResult && result?.length > 0 && (
+        <div className="results-container">
+          {result.map((item) => (
+            <div className="result-row" key={item.taskId}>
+              <div className="result-video">
+                {item.previewUrl && (
+                  <video
+                    src={item.previewUrl}
+                    controls
+                    preload="metadata"
+                    className="result-video-el"
+                  />
+                )}
+              </div>
+
+              <div className="result-captions-grid">
+                {Object.entries(item.captions ?? {}).map(([style, caption]) => (
+                  <div className="caption-box" key={style}>
+                    <h4 className="caption-style">{formatStyleLabel(style)}</h4>
+                    <p className="caption-text">{caption}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );

@@ -2,23 +2,28 @@
   {
     "task_id": "v1",
     "captions": {
-      "formal": "Experience the dynamic flow of autumn in South Korea as urban traffic blends seamlessly with the vibrant yellow ginkgo trees lining this busy city avenue.",
-      "sarcastic": "Because nothing screams 'enjoying the peaceful autumn colors' like rushing through a multi-lane intersection at supersonic speed. At least the ginkgo trees had the decency to stand still.",
-      "humorous_tech": "South Korea's autumn update is looking great, but the frame rate on these cars is causing some serious motion blur. Clearly, the rendering budget went entirely into those high-definition yellow ginkgo trees.",
-      "humorous_non_tech": "It looks like everyone in South Korea is racing to get a look at those gorgeous yellow ginkgo trees. Either that, or they are all late for an important meeting at Korea Illies Engineering."
+      "formal": "A captivating time-lapse captures the vibrant transition of autumn in South Korea, where golden ginkgo trees line a bustling city street. Modern high-rises and distant hills stand as a scenic backdrop to the steady flow of urban traffic.",
+      "sarcastic": "Nothing says 'relaxing fall afternoon' quite like staring at a multi-lane highway of blurred cars rushing past commercial buildings. At least the yellow trees are trying their best to save the view.",
+      "humorous_tech": "South Korea\u2019s autumn graphics engine is working overtime to render these vibrant yellow ginkgo trees. However, the local traffic assets seem to be experiencing some severe motion-blur latency issues.",
+      "humorous_non_tech": "The local ginkgo trees dressed up in their best bright yellow for autumn, but the busy city traffic is moving way too fast to even notice. Someone please tell these blurred SUVs to slow down and enjoy the foliage!"
     }
   },
   {
     "task_id": "v2",
-    "captions": {}
+    "captions": {
+      "formal": "Observe a fluffy orange tabby kitten as it cautiously emerges from the shade of leafy bushes to inspect the camera. This gentle explorer maintains direct eye contact, showcasing its natural curiosity.",
+      "sarcastic": "Watch out, a ferocious fluffy beast is slowly breaching the foliage perimeter and staring directly into your soul. Absolutely terrifying stuff here.",
+      "humorous_tech": "Orange_Tabby_Kitten.exe has successfully booted up in nature and is slowly navigating the foliage rendering path. Warning: Eye-contact detection loop is currently at one hundred percent capacity.",
+      "humorous_non_tech": "This tiny orange lint ball is taking its outdoor expedition very seriously as it stalks the camera through the terrifying jungle of backyard bushes."
+    }
   },
   {
     "task_id": "v3",
     "captions": {
-      "formal": "A dedicated professional demonstrates deep focus and productivity while working at her desk in a modern open-plan office.",
-      "sarcastic": "Nothing screams 'uninterrupted concentration' quite like typing away in an open-plan office with just a black partition screen for privacy.",
-      "humorous_tech": "When you stare at a large computer screen with enough focus, you hope the white keyboard knows exactly what you're trying to input.",
-      "humorous_non_tech": "Hoping that if I look busy enough typing at my desk, the office plants will take care of the rest of my tasks."
+      "formal": "Demonstrating exceptional focus and diligence, a professional manages her daily tasks in a modern, well-lit open-plan office.",
+      "sarcastic": "Nothing says \"collaborative open-plan office\" quite like needing a massive black privacy partition just to get some actual work done.",
+      "humorous_tech": "Maximizing productivity with 100% brainpower and a trusty wired mouse that will never suffer from latency issues.",
+      "humorous_non_tech": "She is channeling absolute concentration into that monitor, using her giant black partition as a shield against any office distractions."
     }
   }
 ]

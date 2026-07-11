@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 load_dotenv()
 
+from contextlib import asynccontextmanager
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.responses import JSONResponse, FileResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -15,7 +16,18 @@ from src.utils.cleanup import cleanup, cleanup_storage
 from src.utils.logger import logger
 from config.settings import UPLOADS_DIR, OUTPUTS_DIR
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    logger.info("Starting up...")
+    yield
+    logger.info("Shutting down, running cleanup...")
+    try:
+        for folder in UPLOADS_DIR.iterdir():
+            cleanup_storage(folder.name)
+    except Exception:
+        logger.exception("Error during shutdown cleanup")
+
+app = FastAPI(lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],

@@ -5,6 +5,10 @@ from config.settings import VIDEO_DIR
 def download_video(video_url:str,task_id:str)->Path:
     VIDEO_DIR.mkdir(parents=True, exist_ok=True)
     video_path=VIDEO_DIR/f"{task_id}.mp4"
+    
+    if video_path.exists():          
+        return video_path
+    
     response = requests.get(video_url, stream=True, timeout=30)
     response.raise_for_status(); 
     with open(video_path, "wb") as file:

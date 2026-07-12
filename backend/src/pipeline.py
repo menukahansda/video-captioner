@@ -9,7 +9,7 @@ from src.preprocessing.audio_transcribe import transcribe_audio
 from src.merge import summarize_video
 from src.captioning.caption_generator import generate_captions
 
-def run_pipeline(video_path : str | Path, task_id : str, backend_name="gemini"):
+def run_pipeline(video_path: str | Path, task_id: str, styles: list[str], backend_name="gemini"):
     # 1. Validate input
     validate_video(video_path) 
     
@@ -23,7 +23,7 @@ def run_pipeline(video_path : str | Path, task_id : str, backend_name="gemini"):
     # 4. Summary
     summary = summarize_video(frames, transcript)
     # 5. Generate Captions
-    captions = generate_captions(summary)
+    captions = generate_captions(summary, styles) 
 
     # 5.Return Final Output
     result = {

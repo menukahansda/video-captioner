@@ -8,7 +8,7 @@ from src.captioning.llm_client import generate_video_summary
 
 def summarize_video(frame_paths, transcript):
     """
-    Generate a factual summary of a video using
+    Generate a structured factual summary (dict) of a video using
     extracted keyframes and transcript.
     """
 

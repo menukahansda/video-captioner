@@ -2,28 +2,28 @@
   {
     "task_id": "v1",
     "captions": {
-      "formal": "A time-lapse sequence captures vehicles traveling through a multi-lane intersection on a city street in South Korea, lined with high-rise apartments and yellow ginkgo trees.",
-      "sarcastic": "Nothing says peaceful autumn quite like watching dozens of tiny metal boxes scramble through a concrete grid in fast-forward.",
-      "humorous_tech": "This South Korean traffic grid is executing a high-throughput data transfer, but the packet routing at the intersection seems highly chaotic.",
-      "humorous_non_tech": "The yellow autumn trees are trying their best to look relaxing, but the cars speeding through this intersection clearly have places to be."
+      "formal": "A static time-lapse captures vehicles traveling along a multi-lane city boulevard lined with yellow autumn trees and high-rise buildings.",
+      "sarcastic": "Oh look, a beautiful autumn day in the city, perfectly complemented by the soothing, romantic sight of a multi-lane traffic jam.",
+      "humorous_tech": "This city's packet routing is terrible, but at least the autumn theme CSS rendering looks fantastic on these high-rise assets.",
+      "humorous_non_tech": "Nothing says peaceful fall foliage walk quite like the roar of buses and trucks rushing past you at high speeds."
     }
   },
   {
     "task_id": "v2",
     "captions": {
-      "formal": "A small, fluffy orange kitten sits on the dirt ground before slowly walking forward toward the camera in an outdoor setting surrounded by bushes and trees.",
-      "sarcastic": "Watch in absolute terror as a ferocious orange beast emerges from the bushes and ruthlessly stalks its target at a snail's pace.",
-      "humorous_tech": "The local network's orange cat.exe program has successfully booted up and is now slowly migrating directly to the front-facing camera.",
-      "humorous_non_tech": "This tiny orange lint ball has stepped out of the shrubbery to personally demand to know why his dinner is three minutes late."
+      "formal": "A small orange kitten sits among green leafy branches before walking forward on a dirt path.",
+      "sarcastic": "Watch out, a terrifying orange puffball is slowly breaching the garden perimeter. You should probably prepare yourself for extreme cuteness.",
+      "humorous_tech": "A tiny orange unit has successfully bypassed the foliage firewall and is now pinging the camera sensor.",
+      "humorous_non_tech": "This little orange explorer has officially decided that the dirt path is far more interesting than hiding in the bushes."
     }
   },
   {
     "task_id": "v3",
     "captions": {
-      "formal": "A young Black woman with her hair in a high bun sits at an office desk, typing on a keyboard and looking at her computer monitor.",
-      "sarcastic": "Nothing says exciting career progression quite like staring intently at a computer screen next to a silent potted plant.",
-      "humorous_tech": "Executing keyboard-smashing protocols at maximum efficiency to make the monitor display look incredibly complex.",
-      "humorous_non_tech": "Typing with extreme urgency to look busy so nobody behind the desk partition asks to plan another meeting."
+      "formal": "A young Black woman with her hair in a high bun types on a keyboard in a modern open-plan office. She is seated at her desk, looking at a desktop monitor next to a potted plant.",
+      "sarcastic": "Thrilling footage of an office worker typing at her desk, accompanied by her incredibly active and supportive coworker, a potted green plant.",
+      "humorous_tech": "Pressing keys on a keyboard in hopes that the code compiles on the first try. Spoilers: the desktop monitor remains unchanged, but the potted plant is rooting for her.",
+      "humorous_non_tech": "Mastering the art of looking incredibly busy by typing with intense focus at her desk, while her potted plant handles the office aesthetic."
     }
   }
 ]

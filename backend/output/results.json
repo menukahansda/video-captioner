@@ -2,28 +2,28 @@
   {
     "task_id": "v1",
     "captions": {
-      "formal": "A captivating time-lapse captures the vibrant transition of autumn in South Korea, where golden ginkgo trees line a bustling city street. Modern high-rises and distant hills stand as a scenic backdrop to the steady flow of urban traffic.",
-      "sarcastic": "Nothing says 'relaxing fall afternoon' quite like staring at a multi-lane highway of blurred cars rushing past commercial buildings. At least the yellow trees are trying their best to save the view.",
-      "humorous_tech": "South Korea\u2019s autumn graphics engine is working overtime to render these vibrant yellow ginkgo trees. However, the local traffic assets seem to be experiencing some severe motion-blur latency issues.",
-      "humorous_non_tech": "The local ginkgo trees dressed up in their best bright yellow for autumn, but the busy city traffic is moving way too fast to even notice. Someone please tell these blurred SUVs to slow down and enjoy the foliage!"
+      "formal": "A time-lapse sequence captures vehicles traveling through a multi-lane intersection on a city street in South Korea, lined with high-rise apartments and yellow ginkgo trees.",
+      "sarcastic": "Nothing says peaceful autumn quite like watching dozens of tiny metal boxes scramble through a concrete grid in fast-forward.",
+      "humorous_tech": "This South Korean traffic grid is executing a high-throughput data transfer, but the packet routing at the intersection seems highly chaotic.",
+      "humorous_non_tech": "The yellow autumn trees are trying their best to look relaxing, but the cars speeding through this intersection clearly have places to be."
     }
   },
   {
     "task_id": "v2",
     "captions": {
-      "formal": "Observe a fluffy orange tabby kitten as it cautiously emerges from the shade of leafy bushes to inspect the camera. This gentle explorer maintains direct eye contact, showcasing its natural curiosity.",
-      "sarcastic": "Watch out, a ferocious fluffy beast is slowly breaching the foliage perimeter and staring directly into your soul. Absolutely terrifying stuff here.",
-      "humorous_tech": "Orange_Tabby_Kitten.exe has successfully booted up in nature and is slowly navigating the foliage rendering path. Warning: Eye-contact detection loop is currently at one hundred percent capacity.",
-      "humorous_non_tech": "This tiny orange lint ball is taking its outdoor expedition very seriously as it stalks the camera through the terrifying jungle of backyard bushes."
+      "formal": "A small, fluffy orange kitten sits on the dirt ground before slowly walking forward toward the camera in an outdoor setting surrounded by bushes and trees.",
+      "sarcastic": "Watch in absolute terror as a ferocious orange beast emerges from the bushes and ruthlessly stalks its target at a snail's pace.",
+      "humorous_tech": "The local network's orange cat.exe program has successfully booted up and is now slowly migrating directly to the front-facing camera.",
+      "humorous_non_tech": "This tiny orange lint ball has stepped out of the shrubbery to personally demand to know why his dinner is three minutes late."
     }
   },
   {
     "task_id": "v3",
     "captions": {
-      "formal": "Demonstrating exceptional focus and diligence, a professional manages her daily tasks in a modern, well-lit open-plan office.",
-      "sarcastic": "Nothing says \"collaborative open-plan office\" quite like needing a massive black privacy partition just to get some actual work done.",
-      "humorous_tech": "Maximizing productivity with 100% brainpower and a trusty wired mouse that will never suffer from latency issues.",
-      "humorous_non_tech": "She is channeling absolute concentration into that monitor, using her giant black partition as a shield against any office distractions."
+      "formal": "A young Black woman with her hair in a high bun sits at an office desk, typing on a keyboard and looking at her computer monitor.",
+      "sarcastic": "Nothing says exciting career progression quite like staring intently at a computer screen next to a silent potted plant.",
+      "humorous_tech": "Executing keyboard-smashing protocols at maximum efficiency to make the monitor display look incredibly complex.",
+      "humorous_non_tech": "Typing with extreme urgency to look busy so nobody behind the desk partition asks to plan another meeting."
     }
   }
 ]
